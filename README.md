@@ -23,4 +23,5 @@ PCR overaplification is probably the cause here
 - sam -> bam
 
 # Current:
-running the mapping-2 job overnight. Will look at results in the morning
+Result from mapping step:
+- All but one samples have >90% alignment rate.
