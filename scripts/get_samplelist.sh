@@ -11,7 +11,7 @@
 
 source config.sh
 FASTQ_FOLDER="$BASEDIR/toxoplasma_de/reads"
-readlist_file="reads.list"
+readlist_file="reads.list.2"
 
 for FILE in $FASTQ_FOLDER/*_*1.fastq.gz
 do 
@@ -19,3 +19,7 @@ do
     SAMPLE=`basename $PREFIX`
     echo -e "${SAMPLE}\t$FILE\t${FILE%?.fastq.gz}2.fastq.gz" >> "$readlist_file"
 done
+
+echo 'sleepin'
+sleep 50m
+

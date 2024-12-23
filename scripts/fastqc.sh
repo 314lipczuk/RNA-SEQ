@@ -14,7 +14,10 @@
 source config.sh
 WORKDIR="$BASEDIR/RNASEQ"
 OUTDIR="$WORKDIR/results"
-SAMPLELIST="$WORKDIR/list.txt"
+SAMPLELIST="$WORKDIR/sample.list"
+
+echo sleepin
+sleep 20m
 
 SAMPLE=`awk -v line=$SLURM_ARRAY_TASK_ID 'NR==line{print $1; exit}' $SAMPLELIST`
 READ1=`awk -v line=$SLURM_ARRAY_TASK_ID 'NR==line{print $2; exit}' $SAMPLELIST`
