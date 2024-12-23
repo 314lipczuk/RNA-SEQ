@@ -10,7 +10,8 @@
 #SBATCH --mail-type=end,fail
 
 # define variables
-WORKDIR="/data/users/$USER/RNASEQ"
+source config.sh
+WORKDIR="$BASEDIR/RNASEQ"
 OUTFILE="$OUTDIR/${SAMPLE}"
 
 module load MultiQC/1.11-foss-2021a

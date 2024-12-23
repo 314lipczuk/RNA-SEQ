@@ -11,27 +11,14 @@
 #SBATCH --array=1-16
 #SBATCH --partition=pibu_el8
 
-# if needed, add some sbtch array with SBATCH --array=1-16
-# Add your module loads or setup commands here
-# module load <module_name>
-
-# Your job commands go here
-# Example:
-# module load mymodule
-# srun myprogram
-
-#!/bin/sh
-
-
-export PATH=/data/users/lfalquet/SBC07107_24/scripts:/software/bin:/usr/local/bin:$PATH;
-export PATH=/data/users/lfalquet/SBC07107_24/scripts/canu-2.2/bin:/data/users/lfalquet/SBC07104_23/scripts/Flye-2.9/bin:$PATH
-
 module load Pysam/0.16.0.1-GCC-10.3.0
 module load SAMtools/1.13-GCC-10.3.0
 module load HISAT2/2.2.1-gompi-2021a
 
+source config.sh
+
 # define variables
-WORKDIR="/data/users/$USER/RNASEQ/mapping"
+WORKDIR="$BASEDIR/mapping"
 OUTDIR="$WORKDIR/results"
 SAMPLELIST="$WORKDIR/../reads.list"
 

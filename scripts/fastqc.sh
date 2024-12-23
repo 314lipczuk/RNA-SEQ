@@ -11,7 +11,8 @@
 #SBATCH --mail-type=end,fail
 
 # define variables
-WORKDIR="/data/users/$USER/RNASEQ"
+source config.sh
+WORKDIR="$BASEDIR/RNASEQ"
 OUTDIR="$WORKDIR/results"
 SAMPLELIST="$WORKDIR/list.txt"
 

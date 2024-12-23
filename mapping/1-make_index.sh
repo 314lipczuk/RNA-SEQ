@@ -16,6 +16,7 @@ module load SAMtools/1.13-GCC-10.3.0
 module load HISAT2/2.2.1-gompi-2021a
 
 # requires having reference.fa
+source config.sh
 
-cd  /data/users/ppilipczuk/RNASEQ/mapping
+cd "$BASEDIR/mapping"
 hisat2-build reference.fa reference_idx
