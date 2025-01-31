@@ -24,10 +24,6 @@ OUTDIR="$WORKDIR/results"
 SAMPLELIST=`find $PREFIX_DIR/mapping/results/*/*sorted.bam`
 REFERENCE_FILE="$PREFIX_DIR/mapping/reference.fa"
 
-#SAMPLE=`awk -v line=$SLURM_ARRAY_TASK_ID 'NR==line{print $1; exit}' $SAMPLELIST`
-#READ1=`awk -v line=$SLURM_ARRAY_TASK_ID 'NR==line{print $2; exit}' $SAMPLELIST`
-#READ2=`awk -v line=$SLURM_ARRAY_TASK_ID 'NR==line{print $3; exit}' $SAMPLELIST`
-
 mkdir -p $OUTDIR
 cd $OUTDIR
 

@@ -9,9 +9,6 @@ but a nicer way to have whole analysis done is to run this one script and have t
 I utilize the slurm job dependency mechanism to schedule all the jobs, and set correct dependencies between them, so that they are executed in correct sequence.
 """
 
-# TODO: add paths to scripts and make sure all steps are in them (there is no 'glue' that i wrote in terminal at the time)
-# TODO: make some kind of basescript/config.sh with bash variables that will be sourced into every step of the pipeline. This will make it nicer for anyone who would want to repro it later, as they dont have to change every single path in every script, just one path in the base script.
-# TODO: fucking get_samplelist wants an argument. god damnit. I should've written it correctly the first time around.
 
 @dataclass
 class Job:

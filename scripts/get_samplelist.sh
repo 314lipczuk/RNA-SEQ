@@ -19,7 +19,3 @@ do
     SAMPLE=`basename $PREFIX`
     echo -e "${SAMPLE}\t$FILE\t${FILE%?.fastq.gz}2.fastq.gz" >> "$readlist_file"
 done
-
-echo 'sleepin'
-sleep 50m
-

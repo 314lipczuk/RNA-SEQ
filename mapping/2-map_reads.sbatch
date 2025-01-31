@@ -17,6 +17,9 @@ module load HISAT2/2.2.1-gompi-2021a
 
 source config.sh
 
+# BEFORE RUNNING:
+# Make sure you have all the indexes generated and placed in the correct directory
+
 # define variables
 WORKDIR="$BASEDIR/mapping"
 OUTDIR="$WORKDIR/results"
@@ -46,4 +49,5 @@ echo "Done sorting "
 samtools index "${SAMPLE}_sorted.bam"
 echo "Done indexing"
 
+# delete garbage
 rm "${SAMPLE}.sam"
